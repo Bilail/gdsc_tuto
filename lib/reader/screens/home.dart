@@ -1,5 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:gdsc_tuto/reader/models/article.dart';
+import 'package:gdsc_tuto/reader/widgets/article_list_tile.dart';
 
 class Homepage extends StatefulWidget {
   const Homepage({Key? key}) : super(key: key);
@@ -17,7 +19,12 @@ class _HomepageState extends State<Homepage> {
       ),
       body : Column(
         children: [
-          ListView()
+          ListView(
+            shrinkWrap: true,
+            children: [
+              ArticleListTile(article: Article(title : "Titre" , author: "Auteur", url : "FR", date:"2022"),)
+            ],
+          )
         ]
 
       ),
